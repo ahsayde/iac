@@ -3,7 +3,9 @@ kind: Deployment
 metadata:
   name: deployment-2
   labels:
-    app: deployment-2
+    app:
+      app: deployment-2
+      owner: test
 spec:
   selector:
     matchLabels:
