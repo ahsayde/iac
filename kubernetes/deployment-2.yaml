@@ -14,8 +14,12 @@ spec:
         app: deployment-2
     spec:
       containers:
-      - name: deployment-2-container
-        image: ubuntu
-        command: ["/bin/bash"]
-        args: ["-c", "sleep 1d"]
+        - name: deployment-2-container
+          image: ubuntu
+          command: ["/bin/bash"]
+          args: 
+            - "-c"
+            - "sleep 1d"
+          securityContext:
+            privileged: true
  

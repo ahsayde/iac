@@ -15,14 +15,12 @@ spec:
         app: deployment-1-a
     spec:
       containers:
-      - name: deployment-1-a-container
-        image: ubuntu
-        command: ["/bin/bash"]
-        args: ["-c", "sleep 1d"]
-        securityContext:
-          privileged: true
-
-
+        - name: deployment-1-a-container
+          image: ubuntu
+          command: ["/bin/bash"]
+          args: ["-c", "sleep 1d"]
+          securityContext:
+            privileged: true
 ---
 
 apiVersion: apps/v1
@@ -41,10 +39,9 @@ spec:
         app: deployment-1-b
     spec:
       containers:
-      - name: deployment-1-b-container
-        image: ubuntu
-        command: ["/bin/bash"]
-        args: ["-c", "sleep 1d"]
-        securityContext:
-          privileged: true
-
+        - name: deployment-1-b-container
+          image: ubuntu
+          command: ["/bin/bash"]
+          args: ["-c", "sleep 1d"]
+          securityContext:
+            privileged: true
