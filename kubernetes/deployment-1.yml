@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,9 +19,8 @@ spec:
           command: ["/bin/bash"]
           args: ["-c", "sleep 1d"]
           securityContext:
-            privileged: true
+            privileged: false
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -44,4 +42,5 @@ spec:
           command: ["/bin/bash"]
           args: ["-c", "sleep 1d"]
           securityContext:
-            privileged: true
+            privileged: false
+
