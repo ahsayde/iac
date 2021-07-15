@@ -16,13 +16,13 @@ spec:
       containers:
         - name: container-1
           securityContext:
-            privileged: false
+            privileged: true
         - name: container-2
           securityContext:
             privileged: false
         - name: container-3
           securityContext:
-            privileged: false
+            privileged: true
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -45,6 +45,6 @@ spec:
           command: ["/bin/bash"]
           args: ["-c", "sleep 1d"]
           securityContext:
-            privileged: false
-            allowPrivilegeEscalation: false
+            privileged: true
+            allowPrivilegeEscalation: true
 
