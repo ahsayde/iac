@@ -15,15 +15,12 @@ spec:
     spec:
       containers:
         - name: container-1
-          image: ubuntu
-          command: ["/bin/bash"]
-          args: ["-c", "sleep 1d"]
           securityContext:
             privileged: true
         - name: container-2
-          image: ubuntu
-          command: ["/bin/bash"]
-          args: ["-c", "sleep 1d"]
+          securityContext:
+            privileged: false
+        - name: container-3
           securityContext:
             privileged: true
 ---
