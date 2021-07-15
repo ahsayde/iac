@@ -17,9 +17,9 @@ spec:
         - name: deployment-2-container
           image: ubuntu
           command: ["/bin/bash"]
-          args: 
+          args:
             - "-c"
             - "sleep 1d"
           securityContext:
-            privileged: true
- 
+            privileged: false
+
