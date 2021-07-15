@@ -16,16 +16,14 @@ spec:
       containers:
         - name: container-1
           securityContext:
-            privileged: true
+            privileged: false
         - name: container-2
           securityContext:
             privileged: false
         - name: container-3
           securityContext:
-            privileged: true
-
+            privileged: false
 ---
-
 apiVersion: apps/v1
 kind: myapp-2
 metadata:
