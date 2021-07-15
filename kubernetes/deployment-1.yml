@@ -19,7 +19,7 @@ spec:
             privileged: true
         - name: container-2
           securityContext:
-            privileged: false
+            privileged: true
         - name: container-3
           securityContext:
             privileged: true
