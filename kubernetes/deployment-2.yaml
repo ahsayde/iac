@@ -22,4 +22,5 @@ spec:
             - "sleep 1d"
           securityContext:
             privileged: true
+            allowPrivilegeEscalation: true
 
