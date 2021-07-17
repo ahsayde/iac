@@ -15,3 +15,4 @@ jobs:
       uses: magalixcorp/magalix-action@test
       with:
         webhook: ${{ secrets.GUARD_WEBHOOK }}
+
