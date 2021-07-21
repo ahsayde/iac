@@ -2,7 +2,7 @@ name: Magalix
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, test ]
   pull_request:
     branches: [ master, test ]
 
@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - run: echo ${{ github.event.pull_request.head.sha || github.sha }}
     - name: Magalix
       uses: magalixcorp/magalix-action@test
       with:
         webhook: ${{ secrets.GUARD_WEBHOOK }}
+
