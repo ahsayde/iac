@@ -2,9 +2,9 @@ name: Magalix
 
 on:
   push:
-    branches: [ master, test ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, test ]
+    branches: [ master ]
 
 jobs:
   magalix:
