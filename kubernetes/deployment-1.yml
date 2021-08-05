@@ -48,7 +48,6 @@ spec:
             allowPrivilegeEscalation: true
 
 ---
-# mglx:ignore
 apiVersion: apps/v1
 kind: Deployment
 metadata:
