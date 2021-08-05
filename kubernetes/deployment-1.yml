@@ -14,7 +14,6 @@ spec:
         app: myapp
     spec:
       containers:
-        # mglx:ignore
         - name: container-1
           securityContext:
             privileged: true
@@ -25,7 +24,6 @@ spec:
           securityContext:
             privileged: true
 ---
-# mglx:ignore
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -52,7 +50,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp-3
-  # mglx:ignore
   labels:
     app: myapp-3
 spec:
@@ -68,4 +65,4 @@ spec:
         - name: container-1
           securityContext:
             privileged: true
-            allowPrivilegeEscalation: true # mglx:ignore
+            allowPrivilegeEscalation: true
