@@ -44,4 +44,3 @@ spec:
           securityContext:
             privileged: true
             allowPrivilegeEscalation: true
-
