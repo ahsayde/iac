@@ -46,7 +46,6 @@ spec:
           securityContext:
             privileged: true
             allowPrivilegeEscalation: true
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -60,7 +59,6 @@ spec:
       app: myapp-3
   template:
     metadata:
-    ` # mglx:ignore
       labels:
         app: myapp-3
     spec:
