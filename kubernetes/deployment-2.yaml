@@ -4,6 +4,7 @@ metadata:
   name: myapp-3
   labels:
     app: myapp-3
+    owner: test
 spec:
   selector:
     matchLabels:
