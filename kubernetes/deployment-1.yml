@@ -4,6 +4,7 @@ metadata:
   name: myapp
   labels:
     app: myapp
+    owner: test
 spec:
   selector:
     matchLabels:
@@ -30,6 +31,7 @@ metadata:
   name: myapp-2
   labels:
     app: myapp-2
+    owner: test
 spec:
   selector:
     matchLabels:
