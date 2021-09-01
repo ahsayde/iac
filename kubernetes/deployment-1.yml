@@ -4,6 +4,7 @@ metadata:
   name: myapp
   labels:
     app: myapp
+    owner: test
 spec:
   selector:
     matchLabels:
@@ -20,10 +21,10 @@ spec:
             privileged: true
         - name: container-2
           securityContext:
-            privileged: true
+            privileged: false
         - name: container-3
           securityContext:
-            privileged: true
+            privileged: false
 ---
 # mglx:ignore
 apiVersion: apps/v1
@@ -53,6 +54,7 @@ metadata:
   name: myapp-3
   labels:
     app: myapp-3
+    owner: test
 spec:
   selector:
     matchLabels:
@@ -65,5 +67,6 @@ spec:
       containers:
         - name: container-1
           securityContext:
-            privileged: true
+            privileged: false
             allowPrivilegeEscalation: true # mglx:ignore
+
