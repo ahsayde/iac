@@ -4,6 +4,7 @@ metadata:
   name: myapp
   labels:
     app: myapp
+    owner: test
 spec:
   selector:
     matchLabels:
@@ -16,7 +17,7 @@ spec:
       containers:
         - name: container-1
           securityContext:
-            privileged: true
+            privileged: false
         - name: container-2
           securityContext:
             privileged: false
@@ -30,6 +31,7 @@ metadata:
   name: myapp-2
   labels:
     app: myapp-2
+    owner: test
 spec:
   selector:
     matchLabels:
@@ -43,5 +45,5 @@ spec:
         - name: container-1
           securityContext:
             privileged: false
-            allowPrivilegeEscalation: true
+            allowPrivilegeEscalation: false
 
