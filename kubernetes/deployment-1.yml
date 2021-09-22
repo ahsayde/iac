@@ -2,8 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp
-  labels:
-    app: myapp
+  labels: owner
 spec:
   selector:
     matchLabels:
@@ -16,7 +15,7 @@ spec:
       containers:
         - name: container-1
           securityContext:
-            privileged: true
+            privileged: false
         - name: container-2
           securityContext:
             privileged: false
@@ -28,8 +27,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp-2
-  labels:
-    app: myapp-2
+  labels: owner
 spec:
   selector:
     matchLabels:
@@ -43,5 +41,5 @@ spec:
         - name: container-1
           securityContext:
             privileged: false
-            allowPrivilegeEscalation: true
+            allowPrivilegeEscalation: false
 
