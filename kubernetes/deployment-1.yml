@@ -20,10 +20,10 @@ spec:
             allowPrivilegeEscalation: true
         - name: container-2
           securityContext:
-            allowPrivilegeEscalation: true
+            allowPrivilegeEscalation: false
         - name: container-3
           securityContext:
-            allowPrivilegeEscalation: true
+            allowPrivilegeEscalation: false
 ---
 # mglx:ignore
 apiVersion: apps/v1
@@ -45,7 +45,6 @@ spec:
         - name: container-1
           securityContext:
             allowPrivilegeEscalation: true
-
 ---
 apiVersion: apps/v1
 kind: Deployment
