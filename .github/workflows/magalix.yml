@@ -16,5 +16,5 @@ jobs:
       with:
         webhook: ${{ secrets.NEW_MODEL_GUARD }}
         auto-remediation: true
-
+        directory: kubernetes
 
