@@ -14,5 +14,5 @@ jobs:
     - name: Magalix
       uses: magalixcorp/magalix-action@test
       with:
-        webhook: ${{ secrets.NEW_MODEL_GUARD }}
+        webhook: https://console.aws.dev.magalix.com/api/v1/kubeguard/866df433-d02d-433c-82eb-8f47475506be/3590a664-d4c1-4db9-904d-711f91948857
         auto-remediation: true
